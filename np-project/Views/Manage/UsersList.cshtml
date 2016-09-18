@@ -1,0 +1,14 @@
+﻿@model np_project.Models.UserList
+
+@{
+    ViewBag.Title = "show User list and Group list by ViewModel";
+}
+
+<h1>@ViewBag.Title</h1>
+<h2>All users</h2>
+<ul class="list-group">
+    @foreach (var user in Model.Users)
+    {
+        <li class="list-group-item">Id - @user.Id, Email - @user.Email, Group - @user.UserName</li>
+    }    
+</ul>

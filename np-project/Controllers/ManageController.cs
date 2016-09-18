@@ -7,6 +7,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using np_project.Models;
+using System.Collections.Generic;
 
 namespace np_project.Controllers
 {
@@ -70,7 +71,8 @@ namespace np_project.Controllers
                 PhoneNumber = await UserManager.GetPhoneNumberAsync(userId),
                 TwoFactor = await UserManager.GetTwoFactorEnabledAsync(userId),
                 Logins = await UserManager.GetLoginsAsync(userId),
-                BrowserRemembered = await AuthenticationManager.TwoFactorBrowserRememberedAsync(userId)
+                BrowserRemembered = await AuthenticationManager.TwoFactorBrowserRememberedAsync(userId),
+                Email = await UserManager.GetEmailAsync(userId)
             };
             return View(model);
         }
@@ -333,7 +335,19 @@ namespace np_project.Controllers
             base.Dispose(disposing);
         }
 
-#region Вспомогательные приложения
+        public ActionResult UsersList()
+        {
+            IEnumerable<ApplicationUser> users = UserManager.Users.Where(x => x.Id != "");
+
+            UserList ugvm = new UserList
+            {
+                Users = users
+            };
+
+            return View(ugvm);
+        }
+
+        #region Вспомогательные приложения
         // Используется для защиты от XSRF-атак при добавлении внешних имен входа
         private const string XsrfKey = "XsrfId";
 

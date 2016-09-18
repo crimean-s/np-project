@@ -18,6 +18,13 @@ namespace np_project
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
+            routes.MapRoute(
+                name: "Register",
+                url: "Account/{action}/{id}",
+                defaults: new { controller = "Account", action = "Register", id = UrlParameter.Optional },
+                constraints: new { id = @"\d+" }
+            );
         }
     }
 }

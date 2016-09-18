@@ -1,0 +1,76 @@
+/* your styles go here */
+
+.job-listing {
+    border: solid 1px #eee;
+    border-bottom: none;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    padding-left: 19px;
+    padding-right: 15px;
+    -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+}
+
+.job-listing.job-listing--featured {
+    border-left: solid 5px #ff7473;
+    padding-left: 15px;
+}
+
+.job-listing:before, .job-listing:after {
+    content: " ";
+    display: table;
+}
+
+.job-listing.job-listing--last {
+    border-bottom: solid 1px #eee;
+    margin-bottom: 40px;
+}
+
+.job__star {
+    text-align: right;
+}
+
+.job__location {
+    margin-right: 5px;
+    color: #999;
+}
+
+.job__title {
+    margin-top: 0;
+}
+
+.job-listing:hover {
+    background: #fafafa;
+}
+
+.job-form-section.job-form-section--compressed .job-main-form {
+    margin-bottom: 0;
+}
+
+.job-form-section .job-main-form {
+    margin-bottom: 40px;
+}
+
+.job-form-section .job-main-form label {
+font-family:Montserrat,Helvetica,Arial,sans-serif;
+text-transform:uppercase;
+letter-spacing:.1em;
+margin-left:10px;
+}
+
+
+.job-form-section.job-form-section--compressed {
+padding:20px;
+}
+
+.job-form-section.job-form-section--image {
+background:center center url(../img/meeting.jpg) no-repeat;
+background-size:cover;
+}
+
+.job-main-form__button {
+margin-top:25px;
+display:block;
+}
+

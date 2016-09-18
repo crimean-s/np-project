@@ -1,0 +1,86 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*{Html.RenderPartial("_Breadcrumbs");}*@
+
+<div id="content">
+    <div class="container">
+
+        <div class="row packages">
+
+            <div class="col-md-6">
+                <div class="package ">
+                    <div class="package-header light-gray">
+                        <h5>Клиент</h5>
+                    </div>
+
+                    <ul>
+                        <li><i class="fa fa-check"></i>Публикация заявок</li>
+                        <li><i class="fa fa-check"></i>История заявок</li>
+                        <li><i class="fa fa-check"></i>Безопасные сделки</li>
+                        <li><i class="fa fa-check"></i>Публикация отзывов</li>
+                    </ul>
+                    <a href="@Url.Action("Register", "Account", new { id = 1 })" class="btn btn-template-main">
+                        Зарегистрироваться клиентом
+                    </a>
+                </div>
+            </div>
+            <!-- / END FIRST PACKAGE -->
+
+            <div class="col-md-6">
+                <div class="package ">
+                    <div class="package-header light-gray">
+                        <h5>Нотариус</h5>
+                    </div>
+
+                    <ul>
+                        <li><i class="fa fa-check"></i>Поиск заказчиков</li>
+                        <li><i class="fa fa-check"></i>История заявок</li>
+                        <li><i class="fa fa-check"></i>Безопасные сделки</li>
+                        <li><i class="fa fa-check"></i>Auto Backup</li>
+                    </ul>
+                    <a href="@Url.Action("Register", "Account", new { id = 2 })" class="btn btn-template-main">
+                        Зарегистрироваться нотариусом
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.row -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box">
+                    <h2 class="text-uppercase text-center">Войти</h2>
+
+                    <p class="lead text-center">Вы уже зарегистрированы у нас?</p>
+                    <p class="text-muted">
+                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean
+                        ultricies mi vitae est. Mauris placerat eleifend leo.
+                    </p>
+
+                    <hr>
+
+                    <form action="customer-orders.html" method="post">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="text" class="form-control" id="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password">
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-template-main"><i class="fa fa-sign-in"></i> Log in</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- /.container -->
+</div>
+<!-- /#content -->

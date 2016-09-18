@@ -1,9 +1,69 @@
 ﻿@model np_project.Models.RegisterViewModel
+
 @{
-    ViewBag.Title = "Регистрация";
+    ViewBag.Title = "RegisterUser";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>@ViewBag.Title.</h2>
+<div id="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box">
+                    <h2 class="text-uppercase text-center">
+                        Регистрация
+                        @if (ViewBag.UserType == 2)
+                        {
+                            @:нотариуса
+                       }
+                        else
+                        {
+                            @:клиента
+                       }
+                    </h2>
+
+                    <p class="lead text-center">
+                        Я
+                        @if (ViewBag.UserType == 2)
+                        {
+                            @:нотариус, и хочу найти клиентов
+                       }
+                        else
+                        {
+                            @:клиент, и хочу найти нотариуса
+                       }
+                    </p>
+                    <p>Регистрация займет у Вас меньше минуты</p>
+                    <p class="text-muted">If you have any questions, please feel free to <a href="contact.html">contact us</a>, our customer service center is working for you 24/7.</p>
+
+                    <hr>
+
+                    <form action="customer-orders.html" method="post">
+                        <div class="form-group">
+                            <label for="firstname-login">Имя</label>
+                            <input type="text" class="form-control" id="firstname-login">
+                        </div>
+                        <div class="form-group">
+                            <label for="lastname-login">Фамилия</label>
+                            <input type="text" class="form-control" id="lastname-login">
+                        </div>
+                        <div class="form-group">
+                            <label for="email-login">Email</label>
+                            <input type="text" class="form-control" id="email-login">
+                        </div>
+                        <div class="form-group">
+                            <label for="password-login">Пароль</label>
+                            <input type="password" class="form-control" id="password-login">
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-template-main"><i class="fa fa-user-md"></i> Зарегистрироваться</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
 {
@@ -36,6 +96,3 @@
     </div>
 }
 
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}

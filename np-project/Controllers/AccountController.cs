@@ -91,6 +91,14 @@ namespace np_project.Controllers
             }
         }
 
+        // GET: RegisterUser
+        [AllowAnonymous]
+        public ActionResult RegisterUser()
+        {
+            return View();
+        }
+        
+
         //
         // GET: /Account/VerifyCode
         [AllowAnonymous]
@@ -136,9 +144,19 @@ namespace np_project.Controllers
 
         //
         // GET: /Account/Register
+        //[AllowAnonymous]
+        //public ActionResult Register()
+        //{
+        //    return View();
+        //}
+
+        
         [AllowAnonymous]
-        public ActionResult Register()
+        public ActionResult Register(int? id)
         {
+            
+            ViewBag.UserType = id;
+            
             return View();
         }
 
