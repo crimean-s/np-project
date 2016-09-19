@@ -173,6 +173,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201609190741494_InitialCreate.cs" />
+    <Compile Include="Migrations\201609190741494_InitialCreate.Designer.cs">
+      <DependentUpon>201609190741494_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609190820383_DataMigration.cs" />
+    <Compile Include="Migrations\201609190820383_DataMigration.Designer.cs">
+      <DependentUpon>201609190820383_DataMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -379,6 +388,20 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\Domain.csproj">
+      <Project>{686E687E-F2D8-4468-9F24-4ABCB7F368B0}</Project>
+      <Name>Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201609190741494_InitialCreate.resx">
+      <DependentUpon>201609190741494_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609190820383_DataMigration.resx">
+      <DependentUpon>201609190820383_DataMigration.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

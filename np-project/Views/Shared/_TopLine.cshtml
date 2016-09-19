@@ -17,10 +17,7 @@ _________________________________________________________ -->
                     <a href="#" class="email" data-animate-hover="pulse"><i class="fa fa-envelope"></i></a>
                 </div>
 
-                <div class="login">
-                    <a href="#" data-toggle="modal" data-target="#login-modal"><i class="fa fa-sign-in"></i> <span class="hidden-xs text-uppercase">Sign in</span></a>
-                    <a href="@Url.Content("~/Account/RegisterUser")"><i class="fa fa-user"></i> <span class="hidden-xs text-uppercase">Sign up</span></a>
-                </div>
+                @Html.Partial("_LoginPartial")
 
             </div>
         </div>

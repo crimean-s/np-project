@@ -154,7 +154,10 @@ namespace np_project.Controllers
         [AllowAnonymous]
         public ActionResult Register(int? id)
         {
-            
+            if(id != 2)
+            {
+                id = 1;
+            }
             ViewBag.UserType = id;
             
             return View();
@@ -169,7 +172,7 @@ namespace np_project.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email, FirstName = model.FirstName, LastName = model.LastName, GroupId = model.GroupId };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
