@@ -72,7 +72,8 @@ namespace np_project.Controllers
                 TwoFactor = await UserManager.GetTwoFactorEnabledAsync(userId),
                 Logins = await UserManager.GetLoginsAsync(userId),
                 BrowserRemembered = await AuthenticationManager.TwoFactorBrowserRememberedAsync(userId),
-                Email = await UserManager.GetEmailAsync(userId)
+                Email = await UserManager.GetEmailAsync(userId),
+                FirstName = UserManager.FindById(userId).FirstName
             };
             return View(model);
         }
