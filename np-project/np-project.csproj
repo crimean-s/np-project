@@ -277,6 +277,7 @@
     <Content Include="Content\img\product2.jpg" />
     <Content Include="Content\img\product3.jpg" />
     <Content Include="Content\img\product4.jpg" />
+    <Content Include="Content\img\profile.jpg" />
     <Content Include="Content\img\slide1.jpg" />
     <Content Include="Content\img\slide2.jpg" />
     <Content Include="Content\img\slide3.jpg" />
@@ -378,6 +379,7 @@
     <Content Include="Views\Shared\_MegaMenu.cshtml" />
     <Content Include="Views\Shared\_NavBar.cshtml" />
     <Content Include="Views\Shared\_TopLine.cshtml" />
+    <Content Include="Views\Shared\_CustomerMenu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

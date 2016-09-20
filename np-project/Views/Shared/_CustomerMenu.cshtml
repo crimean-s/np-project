@@ -19,6 +19,17 @@
             <li>
                 <a href="customer-wishlist.html"><i class="fa fa-heart"></i> Избранное</a>
             </li>
+
+            <li>
+                @if (Model.HasPassword)
+                {
+                    <a href="@Url.Action("ChangePassword", "Manage")"><i class="fa fa-unlock-alt" aria-hidden="true"></i> Изменить пароль</a>
+                }
+                else
+                {
+                    <a href="@Url.Action("SetPassword", "Manage")"><i class="fa fa-unlock-alt" aria-hidden="true"></i> Установить пароль</a>
+                }
+            </li>
             
             <li>
                 <a href="javascript:document.getElementById('logoutForm').submit()"><i class="fa fa-sign-out"></i> Выйти</a>

@@ -74,3 +74,36 @@ margin-top:25px;
 display:block;
 }
 
+
+.progress-small, .progress-small .progress-bar {
+    height: 10px;
+}
+
+#customer-menu .panel-body {
+    background: #fff;
+    border: 1px solid #e4e5e7;
+    border-radius: 2px;
+    padding: 20px 20px 0 20px;
+    position: relative;
+}
+
+#customer-menu .panel-body {
+    border-top: 2px solid #38a7bb;
+}
+
+#customer-menu .progress-bar-success {
+    background-color: #38a7bb;
+}
+
+#customer-menu .contact-stat {
+    padding: 8px 0px;
+    text-align: center;
+}
+
+#customer-menu .contact-stat span {
+    font-size: 10px;
+    font-weight: 500;
+    display: block;
+    color: #9d9fa2;
+    text-transform: uppercase;
+}
